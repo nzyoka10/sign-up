@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #3498db; 
+    --text-dark: #37352f;
+    --text-light: #f6f6f6;
+    --bg-color: #e3eaec;
+    --border-radius: 14px;
+    
+    --odin-background-color: #000000b3; 
+    --create-account-button-color: #596D48;
+    --input-border-color: #E5E7EB;
+
+    --invalid-password-border-color: #ff000090;
+    --selected-input-border-color: #0000FF;
+    --selected-input-box-shadow: 0 0 5px #0000ff80; 
+}
+
+@font-face {
+    font-family: 'Norse Bold'; 
+    src: url('./fonts/Norse-Bold.otf') format('opentype'); 
+}
+
+body{
+    box-sizing: border-box;
+    height: 100vh;
+   overflow: hidden;
+   background: var(--bg-color);
+   color: var(--text-dark);
+   font-family: "Montserrat", sans-serif;
+}
+
+div.container{
+    position: relative;
+}
+
+/** Right side styles  */
+div.left-side{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100vh;
+    background: url(./img/bg.jpg) no-repeat center / cover;
+    opacity: .9;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-side p img{
+    max-width: 100%; 
+    height: auto;
+}
+
+.left-side p{
+    background: var(--odin-background-color);
+    width: 100%;
+    padding:14px;
+}
+
+.txt{
+    font-family: 'Norse Bold', Arial, sans-serif;
+    color: var(--text-light);
+    font-family: var(--);
+    font-size: 4em;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+
+
+/* Right side styling */
+div.right-side{
+    position: relative;
+    margin-left: 43%;
+    padding-bottom: 6px;
+}
+
+div.right-para{
+    padding-top: 3em;
+}
+
+div.right-para p{
+    padding: 1em;
+    font-weight: 600;
+    text-align: justify;
+}
+
+p{
+    padding-left: 22px;
+    font-weight: 600;
+}
+
+p a{
+    text-decoration: none;
+    color: var(--create-account-button-color);
+}
+
+p a:hover{
+    color: var(--selected-input-border-color);
+}
+
+div.card-form{
+    width: 100%;
+    padding: 1em;
+    background-color: var(--bg-color);
+    margin: 0 auto;
+}
+
+div.card{
+    margin-bottom: 12px;
+    height: 300px;
+    background: var(--input-border-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px var(--text-dark);
+    
+}
+
+div.card h3{
+    padding: 1em;
+}
+
+  /* Form columns */
+  .form-column {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+label span{
+    color: var(--invalid-password-border-color);
+    font-weight: 700;
+}
+
+  /* Style for form labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+ /* Style for form inputs */
+
+ input[type="text"],
+ input[type="email"],
+ input[type="password"],
+ input[type="tel"],
+ input[type="submit"] {
+     width: calc(100% - 20px);
+     padding: 10px;
+     margin-bottom: 15px;
+     border: 1px solid var(--input-border-color);
+     border-radius: 5px;
+     box-sizing: border-box;
+ }
+
+ input:valid {
+    border: 1px solid var(--create-account-button-color);
+  }
+
+input:invalid{
+    border: 2px solid var(--invalid-password-border-color);
+}
+
+ /* Style for submit button */
+ input[type="submit"] {
+    width: 25%;
+    margin-left: 2em;
+    font-weight: 600;
+    letter-spacing: .2em;
+     background-color: var(--create-account-button-color);
+     color: var(--text-light);
+     cursor: pointer;
+ }
+
+ /* Style for submit button on hover */
+input[type="submit"]:hover {
+     background-color: var(--create-account-button-hover-color);
+     color: var(--create-account-button-color);
+}
+
